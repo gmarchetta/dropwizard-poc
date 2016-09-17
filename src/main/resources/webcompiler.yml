@@ -1,0 +1,21 @@
+server:
+  adminConnectors:
+    - type: http
+      port: 8181
+  applicationConnectors:
+    - type: http
+      port: 8180
+      idleTimeout: 60s
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: root
+  password: root
+  url: jdbc:mysql://localhost:3306/webcompiler
+  validationQuery: SELECT 1
+# Logging settings
+logging:
+  # default logging level
+  level: INFO
+  # logger specific levels
+  loggers:
+    AppBuilderResource: WARN
